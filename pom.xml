@@ -38,6 +38,9 @@
         <mysql.version>5.1.46</mysql.version>
         <lombok.version>1.16.18</lombok.version>
         <nekohtml.version>1.9.22</nekohtml.version>
+        <jackson.version>2.9.6</jackson.version>
+        <commons-pool2.version>2.5.0</commons-pool2.version>
+        <redis.version>2.0.3.RELEASE</redis.version>
     </properties>
 
     <dependencyManagement>
@@ -125,9 +128,26 @@
                 <artifactId>nekohtml</artifactId>
                 <version>${nekohtml.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
             <!-- Enviroment End -->
 
+            <!-- redis  begin-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons-pool2.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${redis.version}</version>
+            </dependency>
+            <!-- redis  end-->
         </dependencies>
     </dependencyManagement>
 
